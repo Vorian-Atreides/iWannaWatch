@@ -8,11 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		102D98731CF1CECB002CE6E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102D98721CF1CECB002CE6E2 /* AppDelegate.swift */; };
-		102D98751CF1CECB002CE6E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102D98741CF1CECB002CE6E2 /* ViewController.swift */; };
-		102D98771CF1CECB002CE6E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 102D98761CF1CECB002CE6E2 /* Assets.xcassets */; };
 		102D987A1CF1CECB002CE6E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102D98781CF1CECB002CE6E2 /* Main.storyboard */; };
 		102D98851CF1CECB002CE6E2 /* iWannaWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102D98841CF1CECB002CE6E2 /* iWannaWatchTests.swift */; };
 		102D98901CF1CECB002CE6E2 /* iWannaWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102D988F1CF1CECB002CE6E2 /* iWannaWatchUITests.swift */; };
+		102D98A01CF20455002CE6E2 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 102D989F1CF20455002CE6E2 /* Podfile */; };
+		102D98A71CF49C69002CE6E2 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102D98A61CF49C69002CE6E2 /* Episode.swift */; };
+		102D98B01CF4B70F002CE6E2 /* ARequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102D98AF1CF4B70F002CE6E2 /* ARequest.swift */; };
+		1040ADA01CF759B100F5F9DA /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1040AD9F1CF759B100F5F9DA /* Error.swift */; };
+		1040ADA21CF7609200F5F9DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1040ADA11CF7609200F5F9DA /* User.swift */; };
+		1040ADA41CF9E39300F5F9DA /* IModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1040ADA31CF9E39300F5F9DA /* IModel.swift */; };
+		1040ADAD1CFE5A3000F5F9DA /* EpisodesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1040ADAC1CFE5A3000F5F9DA /* EpisodesRequest.swift */; };
+		1040ADAF1CFE5ADD00F5F9DA /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1040ADAE1CFE5ADD00F5F9DA /* Show.swift */; };
+		1049AABF1D070158001697F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1049AABE1D070158001697F4 /* Assets.xcassets */; };
+		1049AAC31D083D72001697F4 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1049AAC21D083D72001697F4 /* MainView.xib */; };
+		1049AAC51D083DEF001697F4 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1049AAC41D083DEF001697F4 /* LoginView.xib */; };
+		1049AAC71D083F96001697F4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1049AAC61D083F96001697F4 /* LoginView.swift */; };
+		1049AAC91D0840CD001697F4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1049AAC81D0840CD001697F4 /* MainView.swift */; };
+		1049AACB1D0844A8001697F4 /* INavigatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1049AACA1D0844A8001697F4 /* INavigatorDelegate.swift */; };
+		104C493F1CFF1DBF000E0F50 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104C493E1CFF1DBF000E0F50 /* StatusMenuController.swift */; };
+		104C49421CFF228E000E0F50 /* StatusServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104C49411CFF228E000E0F50 /* StatusServiceView.swift */; };
+		10612D351CF5DBA50013F29E /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10612D341CF5DBA50013F29E /* Authentication.swift */; };
+		10612D371CF5F4DD0013F29E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10612D361CF5F4DD0013F29E /* WebKit.framework */; };
+		10612D3A1CF7173D0013F29E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10612D391CF7173D0013F29E /* StringExtensions.swift */; };
+		10AD8C4B1D0DA18400888F87 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AD8C4A1D0DA18400888F87 /* Animations.swift */; };
+		10F957561D04448300D3A73B /* EpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F957541D04448300D3A73B /* EpisodeView.swift */; };
+		10F957571D04448300D3A73B /* EpisodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10F957551D04448300D3A73B /* EpisodeView.xib */; };
+		10FF6D3E1CFF4FFF004F4FBB /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF6D3D1CFF4FFF004F4FBB /* Reachability.swift */; };
+		10FF6D491D027D8A004F4FBB /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF6D481D027D8A004F4FBB /* UserStorage.swift */; };
+		10FF6D4B1D030876004F4FBB /* ShowCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF6D4A1D030876004F4FBB /* ShowCellView.swift */; };
+		10FF6D4D1D03153A004F4FBB /* PictureRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF6D4C1D03153A004F4FBB /* PictureRequests.swift */; };
+		B7973A12E77581EDC6CADE77 /* Pods_iWannaWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C78AF9BC9AD5568159895 /* Pods_iWannaWatch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +60,6 @@
 /* Begin PBXFileReference section */
 		102D986F1CF1CECB002CE6E2 /* iWannaWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iWannaWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		102D98721CF1CECB002CE6E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		102D98741CF1CECB002CE6E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		102D98761CF1CECB002CE6E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		102D98791CF1CECB002CE6E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		102D987B1CF1CECB002CE6E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		102D98801CF1CECB002CE6E2 /* iWannaWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iWannaWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +68,35 @@
 		102D988B1CF1CECB002CE6E2 /* iWannaWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iWannaWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		102D988F1CF1CECB002CE6E2 /* iWannaWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iWannaWatchUITests.swift; sourceTree = "<group>"; };
 		102D98911CF1CECB002CE6E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		102D989F1CF20455002CE6E2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		102D98A61CF49C69002CE6E2 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Episode.swift; path = BetaSeriesAPI/Episode.swift; sourceTree = "<group>"; };
+		102D98AF1CF4B70F002CE6E2 /* ARequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ARequest.swift; path = BetaSeriesAPI/ARequest.swift; sourceTree = "<group>"; };
+		1040AD9F1CF759B100F5F9DA /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Error.swift; path = BetaSeriesAPI/Error.swift; sourceTree = "<group>"; };
+		1040ADA11CF7609200F5F9DA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = BetaSeriesAPI/User.swift; sourceTree = "<group>"; };
+		1040ADA31CF9E39300F5F9DA /* IModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IModel.swift; path = BetaSeriesAPI/IModel.swift; sourceTree = "<group>"; };
+		1040ADAC1CFE5A3000F5F9DA /* EpisodesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EpisodesRequest.swift; path = BetaSeriesAPI/EpisodesRequest.swift; sourceTree = "<group>"; };
+		1040ADAE1CFE5ADD00F5F9DA /* Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Show.swift; path = BetaSeriesAPI/Show.swift; sourceTree = "<group>"; };
+		1049AABE1D070158001697F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1049AAC21D083D72001697F4 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		1049AAC41D083DEF001697F4 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		1049AAC61D083F96001697F4 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1049AAC81D0840CD001697F4 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		1049AACA1D0844A8001697F4 /* INavigatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INavigatorDelegate.swift; sourceTree = "<group>"; };
+		104C493E1CFF1DBF000E0F50 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+		104C49411CFF228E000E0F50 /* StatusServiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusServiceView.swift; sourceTree = "<group>"; };
+		10612D341CF5DBA50013F29E /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Authentication.swift; path = BetaSeriesAPI/Authentication.swift; sourceTree = "<group>"; };
+		10612D361CF5F4DD0013F29E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		10612D391CF7173D0013F29E /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		10AD8C4A1D0DA18400888F87 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		10F957541D04448300D3A73B /* EpisodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeView.swift; sourceTree = "<group>"; };
+		10F957551D04448300D3A73B /* EpisodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpisodeView.xib; sourceTree = "<group>"; };
+		10FF6D3D1CFF4FFF004F4FBB /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = BetaSeriesAPI/Reachability.swift; sourceTree = "<group>"; };
+		10FF6D481D027D8A004F4FBB /* UserStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		10FF6D4A1D030876004F4FBB /* ShowCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCellView.swift; sourceTree = "<group>"; };
+		10FF6D4C1D03153A004F4FBB /* PictureRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PictureRequests.swift; path = BetaSeriesAPI/PictureRequests.swift; sourceTree = "<group>"; };
+		7D37BA5206F4C912322662ED /* Pods-iWannaWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iWannaWatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iWannaWatch/Pods-iWannaWatch.debug.xcconfig"; sourceTree = "<group>"; };
+		8CC7674A8A233241F15EF8E2 /* Pods-iWannaWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iWannaWatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-iWannaWatch/Pods-iWannaWatch.release.xcconfig"; sourceTree = "<group>"; };
+		F66C78AF9BC9AD5568159895 /* Pods_iWannaWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iWannaWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10612D371CF5F4DD0013F29E /* WebKit.framework in Frameworks */,
+				B7973A12E77581EDC6CADE77 /* Pods_iWannaWatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,10 +129,13 @@
 		102D98661CF1CECA002CE6E2 = {
 			isa = PBXGroup;
 			children = (
+				102D989F1CF20455002CE6E2 /* Podfile */,
 				102D98711CF1CECB002CE6E2 /* iWannaWatch */,
 				102D98831CF1CECB002CE6E2 /* iWannaWatchTests */,
 				102D988E1CF1CECB002CE6E2 /* iWannaWatchUITests */,
 				102D98701CF1CECB002CE6E2 /* Products */,
+				27F39B5A374D24CF53A5AB1E /* Pods */,
+				E8A387EE859D09655F4383FA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,11 +152,12 @@
 		102D98711CF1CECB002CE6E2 /* iWannaWatch */ = {
 			isa = PBXGroup;
 			children = (
-				102D98721CF1CECB002CE6E2 /* AppDelegate.swift */,
-				102D98741CF1CECB002CE6E2 /* ViewController.swift */,
-				102D98761CF1CECB002CE6E2 /* Assets.xcassets */,
+				10612D381CF717290013F29E /* Utils */,
+				102D989E1CF1CF10002CE6E2 /* BetaSeriesAPI */,
+				104C49401CFF2274000E0F50 /* Views */,
+				10FF6D431D01D7E7004F4FBB /* Controllers */,
 				102D98781CF1CECB002CE6E2 /* Main.storyboard */,
-				102D987B1CF1CECB002CE6E2 /* Info.plist */,
+				102D989D1CF1CEDB002CE6E2 /* ProvidingFiles */,
 			);
 			path = iWannaWatch;
 			sourceTree = "<group>";
@@ -122,6 +180,102 @@
 			path = iWannaWatchUITests;
 			sourceTree = "<group>";
 		};
+		102D989D1CF1CEDB002CE6E2 /* ProvidingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1049AABE1D070158001697F4 /* Assets.xcassets */,
+				102D98721CF1CECB002CE6E2 /* AppDelegate.swift */,
+				102D987B1CF1CECB002CE6E2 /* Info.plist */,
+			);
+			name = ProvidingFiles;
+			sourceTree = "<group>";
+		};
+		102D989E1CF1CF10002CE6E2 /* BetaSeriesAPI */ = {
+			isa = PBXGroup;
+			children = (
+				102D98AE1CF4B6F9002CE6E2 /* Requests */,
+				102D98A11CF487F4002CE6E2 /* Models */,
+			);
+			name = BetaSeriesAPI;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		102D98A11CF487F4002CE6E2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				102D98A61CF49C69002CE6E2 /* Episode.swift */,
+				1040AD9F1CF759B100F5F9DA /* Error.swift */,
+				1040ADA11CF7609200F5F9DA /* User.swift */,
+				1040ADA31CF9E39300F5F9DA /* IModel.swift */,
+				1040ADAE1CFE5ADD00F5F9DA /* Show.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		102D98AE1CF4B6F9002CE6E2 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				102D98AF1CF4B70F002CE6E2 /* ARequest.swift */,
+				10612D341CF5DBA50013F29E /* Authentication.swift */,
+				1040ADAC1CFE5A3000F5F9DA /* EpisodesRequest.swift */,
+				10FF6D3D1CFF4FFF004F4FBB /* Reachability.swift */,
+				10FF6D4C1D03153A004F4FBB /* PictureRequests.swift */,
+			);
+			name = Requests;
+			sourceTree = "<group>";
+		};
+		104C49401CFF2274000E0F50 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				104C49411CFF228E000E0F50 /* StatusServiceView.swift */,
+				10FF6D4A1D030876004F4FBB /* ShowCellView.swift */,
+				1049AAC21D083D72001697F4 /* MainView.xib */,
+				10F957551D04448300D3A73B /* EpisodeView.xib */,
+				1049AAC41D083DEF001697F4 /* LoginView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		10612D381CF717290013F29E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				10612D391CF7173D0013F29E /* StringExtensions.swift */,
+				10FF6D481D027D8A004F4FBB /* UserStorage.swift */,
+				1049AACA1D0844A8001697F4 /* INavigatorDelegate.swift */,
+				10AD8C4A1D0DA18400888F87 /* Animations.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		10FF6D431D01D7E7004F4FBB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				10F957541D04448300D3A73B /* EpisodeView.swift */,
+				104C493E1CFF1DBF000E0F50 /* StatusMenuController.swift */,
+				1049AAC81D0840CD001697F4 /* MainView.swift */,
+				1049AAC61D083F96001697F4 /* LoginView.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		27F39B5A374D24CF53A5AB1E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D37BA5206F4C912322662ED /* Pods-iWannaWatch.debug.xcconfig */,
+				8CC7674A8A233241F15EF8E2 /* Pods-iWannaWatch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E8A387EE859D09655F4383FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10612D361CF5F4DD0013F29E /* WebKit.framework */,
+				F66C78AF9BC9AD5568159895 /* Pods_iWannaWatch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +283,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 102D98941CF1CECB002CE6E2 /* Build configuration list for PBXNativeTarget "iWannaWatch" */;
 			buildPhases = (
+				16C358CC44B08F064DB1F019 /* 📦 Check Pods Manifest.lock */,
 				102D986B1CF1CECA002CE6E2 /* Sources */,
 				102D986C1CF1CECA002CE6E2 /* Frameworks */,
 				102D986D1CF1CECA002CE6E2 /* Resources */,
+				000380D59738BEBE55855DCD /* 📦 Embed Pods Frameworks */,
+				2EA4077620519E9FF79438E0 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,8 +383,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				102D98771CF1CECB002CE6E2 /* Assets.xcassets in Resources */,
+				10F957571D04448300D3A73B /* EpisodeView.xib in Resources */,
+				102D98A01CF20455002CE6E2 /* Podfile in Resources */,
+				1049AAC51D083DEF001697F4 /* LoginView.xib in Resources */,
+				1049AABF1D070158001697F4 /* Assets.xcassets in Resources */,
 				102D987A1CF1CECB002CE6E2 /* Main.storyboard in Resources */,
+				1049AAC31D083D72001697F4 /* MainView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,13 +408,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		000380D59738BEBE55855DCD /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iWannaWatch/Pods-iWannaWatch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		16C358CC44B08F064DB1F019 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2EA4077620519E9FF79438E0 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iWannaWatch/Pods-iWannaWatch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		102D986B1CF1CECA002CE6E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				102D98751CF1CECB002CE6E2 /* ViewController.swift in Sources */,
+				1040ADAF1CFE5ADD00F5F9DA /* Show.swift in Sources */,
+				1040ADA41CF9E39300F5F9DA /* IModel.swift in Sources */,
+				10FF6D491D027D8A004F4FBB /* UserStorage.swift in Sources */,
+				10FF6D4B1D030876004F4FBB /* ShowCellView.swift in Sources */,
+				1049AACB1D0844A8001697F4 /* INavigatorDelegate.swift in Sources */,
+				1040ADA01CF759B100F5F9DA /* Error.swift in Sources */,
+				1040ADAD1CFE5A3000F5F9DA /* EpisodesRequest.swift in Sources */,
+				1049AAC91D0840CD001697F4 /* MainView.swift in Sources */,
+				102D98A71CF49C69002CE6E2 /* Episode.swift in Sources */,
+				104C493F1CFF1DBF000E0F50 /* StatusMenuController.swift in Sources */,
+				10FF6D4D1D03153A004F4FBB /* PictureRequests.swift in Sources */,
 				102D98731CF1CECB002CE6E2 /* AppDelegate.swift in Sources */,
+				10F957561D04448300D3A73B /* EpisodeView.swift in Sources */,
+				1040ADA21CF7609200F5F9DA /* User.swift in Sources */,
+				1049AAC71D083F96001697F4 /* LoginView.swift in Sources */,
+				104C49421CFF228E000E0F50 /* StatusServiceView.swift in Sources */,
+				102D98B01CF4B70F002CE6E2 /* ARequest.swift in Sources */,
+				10FF6D3E1CFF4FFF004F4FBB /* Reachability.swift in Sources */,
+				10612D3A1CF7173D0013F29E /* StringExtensions.swift in Sources */,
+				10612D351CF5DBA50013F29E /* Authentication.swift in Sources */,
+				10AD8C4B1D0DA18400888F87 /* Animations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,20 +612,25 @@
 		};
 		102D98951CF1CECB002CE6E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D37BA5206F4C912322662ED /* Pods-iWannaWatch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = iWannaWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.siffert.gaston.iWannaWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		102D98961CF1CECB002CE6E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CC7674A8A233241F15EF8E2 /* Pods-iWannaWatch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = iWannaWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -475,6 +708,7 @@
 				102D98961CF1CECB002CE6E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		102D98971CF1CECB002CE6E2 /* Build configuration list for PBXNativeTarget "iWannaWatchTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +717,7 @@
 				102D98991CF1CECB002CE6E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		102D989A1CF1CECB002CE6E2 /* Build configuration list for PBXNativeTarget "iWannaWatchUITests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +726,7 @@
 				102D989C1CF1CECB002CE6E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

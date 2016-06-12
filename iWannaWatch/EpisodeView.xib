@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="EpisodeView" customModule="iWannaWatch" customModuleProvider="target">
+            <connections>
+                <outlet property="codeTextField" destination="4FY-PM-XVH" id="WWB-jF-zF4"/>
+                <outlet property="seenButton" destination="fxY-jm-sEk" id="Kg1-Lh-zSd"/>
+                <outlet property="titleLabel" destination="PIV-XV-Y1p" id="6Ya-bg-l1w"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView wantsLayer="YES" appearanceType="aqua" translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="32"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" alphaValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4FY-PM-XVH" userLabel="CodeLabel">
+                    <rect key="frame" x="0.0" y="20" width="168" height="12"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Code" usesSingleLineMode="YES" id="Rss-D6-tCV">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PIV-XV-Y1p">
+                    <rect key="frame" x="0.0" y="0.0" width="168" height="20"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Title" id="cZl-wq-ZYw">
+                        <font key="font" metaFont="system" size="14"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fxY-jm-sEk" userLabel="SeenButton">
+                    <rect key="frame" x="168" y="0.0" width="32" height="32"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="unseen" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="ZvL-TI-1Pa">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="seenPressed:" target="-2" id="5yK-SS-vDJ"/>
+                    </connections>
+                </button>
+            </subviews>
+        </customView>
+    </objects>
+    <resources>
+        <image name="unseen" width="12.800000190734863" height="12.800000190734863"/>
+    </resources>
+</document>
