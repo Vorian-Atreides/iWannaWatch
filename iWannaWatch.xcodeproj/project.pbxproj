@@ -30,6 +30,7 @@
 		10612D351CF5DBA50013F29E /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10612D341CF5DBA50013F29E /* Authentication.swift */; };
 		10612D371CF5F4DD0013F29E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10612D361CF5F4DD0013F29E /* WebKit.framework */; };
 		10612D3A1CF7173D0013F29E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10612D391CF7173D0013F29E /* StringExtensions.swift */; };
+		1063B4541D12DE6F00649DC8 /* IReachabilityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1063B4531D12DE6F00649DC8 /* IReachabilityDelegate.swift */; };
 		10AD8C4B1D0DA18400888F87 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AD8C4A1D0DA18400888F87 /* Animations.swift */; };
 		10F957561D04448300D3A73B /* EpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F957541D04448300D3A73B /* EpisodeView.swift */; };
 		10F957571D04448300D3A73B /* EpisodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10F957551D04448300D3A73B /* EpisodeView.xib */; };
@@ -87,6 +88,7 @@
 		10612D341CF5DBA50013F29E /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Authentication.swift; path = BetaSeriesAPI/Authentication.swift; sourceTree = "<group>"; };
 		10612D361CF5F4DD0013F29E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		10612D391CF7173D0013F29E /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		1063B4531D12DE6F00649DC8 /* IReachabilityDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IReachabilityDelegate.swift; sourceTree = "<group>"; };
 		10AD8C4A1D0DA18400888F87 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		10F957541D04448300D3A73B /* EpisodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeView.swift; sourceTree = "<group>"; };
 		10F957551D04448300D3A73B /* EpisodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpisodeView.xib; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				10FF6D481D027D8A004F4FBB /* UserStorage.swift */,
 				1049AACA1D0844A8001697F4 /* INavigatorDelegate.swift */,
 				10AD8C4A1D0DA18400888F87 /* Animations.swift */,
+				1063B4531D12DE6F00649DC8 /* IReachabilityDelegate.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				10FF6D4D1D03153A004F4FBB /* PictureRequests.swift in Sources */,
 				102D98731CF1CECB002CE6E2 /* AppDelegate.swift in Sources */,
 				10F957561D04448300D3A73B /* EpisodeView.swift in Sources */,
+				1063B4541D12DE6F00649DC8 /* IReachabilityDelegate.swift in Sources */,
 				1040ADA21CF7609200F5F9DA /* User.swift in Sources */,
 				1049AAC71D083F96001697F4 /* LoginView.swift in Sources */,
 				104C49421CFF228E000E0F50 /* StatusServiceView.swift in Sources */,

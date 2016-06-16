@@ -12,6 +12,8 @@ class StatusMenuController: NSObjectController, INavigatorDelegate {
 
     @IBOutlet weak var StatusMenu       : NSMenu!
     @IBOutlet weak var mainMenuItem     : NSMenuItem!
+    @IBOutlet weak var serviceMenu      : StatusServiceView!
+    
     @IBOutlet weak var loginTextField   : NSTextField!
     @IBOutlet weak var logoutButton     : NSButton!
     
@@ -33,12 +35,14 @@ class StatusMenuController: NSObjectController, INavigatorDelegate {
             _mainController         = LoginView()
             loginTextField.hidden   = true
             logoutButton.hidden     = true
-            (_mainController as? LoginView)?.delegate = self
+            (_mainController as? LoginView)?.navigatorDelegate = self
+            (_mainController as? LoginView)?.reachabilityDelegate = self
         } else {
             _mainController = MainView()
             loginTextField.hidden       = false
             logoutButton.hidden         = false
             loginTextField.stringValue  = UserStorage.user?.login ?? ""
+            (_mainController as? MainView)?.delegate = self
         }
         
         mainMenuItem.view = _mainController?.view
@@ -46,14 +50,25 @@ class StatusMenuController: NSObjectController, INavigatorDelegate {
     }
     
     @IBAction func logoutClicked(sender: NSButton) {
-        UserStorage.token   = nil
-        UserStorage.user    = nil
+        UserStorage.clear()
         refreshUI()
     }
     
     @IBAction func quitClicked(sender: NSButton) {
         NSApplication.sharedApplication().terminate(self)
     }
+}
+
+extension StatusMenuController: IReachabilityDelegate {
+    
+    func isUnreachable() {
+        serviceMenu.isUnreachable()
+    }
+    
+    func isReachable() {
+        serviceMenu.isReachable()
+    }
+    
 }
 
 extension StatusMenuController {

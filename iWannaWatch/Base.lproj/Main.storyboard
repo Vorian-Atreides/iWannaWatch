@@ -679,6 +679,7 @@
                         <outlet property="loginTextField" destination="ddO-Zk-euP" id="nGL-jQ-p1l"/>
                         <outlet property="logoutButton" destination="jIz-iJ-WRx" id="RAV-dh-hRx"/>
                         <outlet property="mainMenuItem" destination="d2R-N9-8Hu" id="k7v-47-Aos"/>
+                        <outlet property="serviceMenu" destination="mZk-S5-5Or" id="AqF-k0-l4u"/>
                     </connections>
                 </objectController>
                 <menu id="PvM-dj-s9N">

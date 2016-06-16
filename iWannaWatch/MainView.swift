@@ -16,15 +16,17 @@ class MainView: NSViewController {
     private var _shows              = [Show]()
     private var _show_cells         = [ShowCellView]()
     
+    var delegate                    : IReachabilityDelegate?
+    
+    private var _timer              : NSTimer?
+    private let _reachability       = Reachability()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.setDataSource(self)
         tableView.setDelegate(self)
-        let timer = NSTimer(timeInterval: 10 * 60, target: self, selector:
-            #selector(MainView.loadEpisodes), userInfo: nil, repeats: true)
-        NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
-        loadEpisodes()
+        startCheckNews()
     }
     
     private func clearGUI() {
@@ -40,14 +42,52 @@ class MainView: NSViewController {
     }
     
     private func onEpisodesSuccess(shows: [Show]) {
+        delegate?.isReachable()
         clearGUI()
-        _shows      = shows
+        _shows      = shows.sort({ (first, second) -> Bool in
+            return first.title < second.title
+        })
         tableView.reloadData()
     }
     
     private func onEpisodeFailed(errors: [Error]) {
-        print(errors)
+        if let error = errors.first {
+            if error.code == 0 {
+                delegate?.isUnreachable()
+                startCheckReachability()
+            }
+        }
     }
+}
+
+extension MainView {
+    
+    private func startCheckNews() {
+        _timer?.invalidate()
+        _timer = NSTimer(timeInterval: 10 * 60, target: self, selector:
+            #selector(MainView.loadEpisodes), userInfo: nil, repeats: true)
+        NSRunLoop.mainRunLoop().addTimer(_timer!, forMode: NSRunLoopCommonModes)
+        loadEpisodes()
+    }
+    
+    private func startCheckReachability() {
+        _timer?.invalidate()
+        _timer = NSTimer(timeInterval: 10, target: self, selector:
+            #selector(MainView.checkReachability), userInfo: nil, repeats: true)
+        NSRunLoop.mainRunLoop().addTimer(_timer!, forMode: NSRunLoopCommonModes)
+        checkReachability()
+    }
+    
+    @objc
+    private func checkReachability() {
+        _reachability.Ping({
+            self.delegate?.isReachable()
+            self.startCheckNews()
+        }) {
+            self.delegate?.isUnreachable()
+        }
+    }
+    
 }
 
 extension MainView: NSTableViewDataSource {

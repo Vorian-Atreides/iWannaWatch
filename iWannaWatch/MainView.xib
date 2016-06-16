@@ -44,21 +44,21 @@
                                         </textFieldCell>
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
-                                            <customView identifier="show_cell" wantsLayer="YES" id="5t8-0j-ry2" userLabel="ShowCellView" customClass="ShowCellView" customModule="iWannaWatch" customModuleProvider="target">
+                                            <customView identifier="show_cell" wantsLayer="YES" appearanceType="aqua" id="5t8-0j-ry2" userLabel="ShowCellView" customClass="ShowCellView" customModule="iWannaWatch" customModuleProvider="target">
                                                 <rect key="frame" x="1" y="1" width="200" height="64"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <subviews>
-                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e7o-Dr-6fC">
+                                                    <imageView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e7o-Dr-6fC">
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="64"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="64" id="iQl-HS-fjO"/>
                                                         </constraints>
                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="nso-sH-KUM"/>
                                                     </imageView>
-                                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lNP-hH-PfN">
+                                                    <stackView wantsLayer="YES" distribution="fill" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lNP-hH-PfN">
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="16"/>
                                                         <subviews>
-                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SdB-mj-xkD">
+                                                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SdB-mj-xkD">
                                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="16"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="dRU-7k-Jiz"/>
@@ -72,7 +72,7 @@
                                                                     <color key="backgroundColor" white="0.0" alpha="0.40482219829999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </textFieldCell>
                                                             </textField>
-                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="R1g-ND-nIC">
+                                                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="R1g-ND-nIC">
                                                                 <rect key="frame" x="150" y="0.0" width="50" height="16"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="bSu-Ob-qVd"/>
@@ -96,7 +96,7 @@
                                                             <real value="3.4028234663852886e+38"/>
                                                         </customSpacing>
                                                     </stackView>
-                                                    <stackView wantsLayer="YES" distribution="fillEqually" orientation="vertical" alignment="leading" spacing="2" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="teF-lY-D7A">
+                                                    <stackView wantsLayer="YES" distribution="fillEqually" orientation="vertical" alignment="leading" spacing="2" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" misplaced="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="teF-lY-D7A">
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="0.0"/>
                                                     </stackView>
                                                 </subviews>

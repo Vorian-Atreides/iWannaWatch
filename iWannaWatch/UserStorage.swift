@@ -62,4 +62,16 @@ class UserStorage {
         return nil
     }
     
+    static func clear() {
+        _userDefault.removePersistentDomainForName(NSBundle.mainBundle().bundleIdentifier!)
+    }
+    
+    static func picturesClear() {
+        let token = UserStorage.token
+        let user = UserStorage.user
+        
+        UserStorage.clear()
+        UserStorage.token = token
+        UserStorage.user = user
+    }
 }

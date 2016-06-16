@@ -48,7 +48,7 @@ class ARequest {
     // Convert the JSON into an inflated IModel
     private func builder<T: IModel>(json: JSON, onErrors: ([Error]) -> Void) -> T? {
         if !T.isValidJSON(json) {
-            onErrors([Error(code: 0, reason: "JSON is invalid.")])
+            onErrors([Error(code: 1, reason: "JSON is invalid.")])
             return nil
         }
         return T(json: json)

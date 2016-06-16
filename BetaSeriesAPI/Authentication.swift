@@ -25,7 +25,7 @@ class Authentication: ARequest {
     func buildParameters(login: String, password: String) -> [String: String] {
         let parameters = [
             "login"     : login,
-            "password"  : password.md5()
+            "password"  : password
         ]
         return parameters
     }
