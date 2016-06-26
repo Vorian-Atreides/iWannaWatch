@@ -50,6 +50,7 @@ class EpisodeView: NSViewController {
     @IBAction func seenPressed(sender: NSButton) {
         Animations.startScaleAnimation(seenButton)
         Animations.startSpinningAnimation(seenButton)
+        
         let request = EpisodeWatchedRequest()
         if !hasSeen {
             request.post(episode!.id, onSuccess: onSuccess, onErrors: onFailed)
@@ -65,7 +66,6 @@ class EpisodeView: NSViewController {
     }
     
     private func onFailed(errors: [Error]) {
-        print(errors.first)
         seenButton?.layer?.removeAnimationForKey(Animations.ROTATE_KEY)
     }
     

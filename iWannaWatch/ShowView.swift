@@ -25,10 +25,6 @@ class ShowView: NSViewController {
     
     var show    : Show? {
         didSet {
-            episodes.removeAll()
-            tableView?.reloadData()
-            tableView?.layout()
-            
             loadGUI()
         }
     }
@@ -52,6 +48,7 @@ class ShowView: NSViewController {
         } else {
             request.getShowWithSize(show!.id, height: ShowView.HEIGHT, width: ShowView.WIDTH, onSuccess: onSuccess)
         }
+
     }
     
     private func onSuccess(data: NSData) {

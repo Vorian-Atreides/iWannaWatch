@@ -15,7 +15,6 @@ class MainView: NSViewController {
     private let         episodeRequests = EpisodesRequest()
     private var         showViews       = [ShowView]()
     
-    private var         lastCheck       : NSDate?
     private var         timer           : NSTimer?
     private let         reachability    = Reachability()
     
