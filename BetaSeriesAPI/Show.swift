@@ -20,15 +20,15 @@ struct Show: IModel {
         return true
     }
     
-    let id          : Int
-    let title       : String
-    let remaining   : Int
+    let id          : Int?
+    let title       : String?
+    let remaining   : Int?
     var unseen      = [Episode]()
     
     init(json: JSON) {
-        id          = json["id"].int!
-        title       = json["title"].string!
-        remaining   = json["remaining"].int!
+        id          = json["id"].int
+        title       = json["title"].string
+        remaining   = json["remaining"].int
         for item in json["unseen"].arrayValue {
             let episode = Episode(json: item)
             unseen.append(episode)

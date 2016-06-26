@@ -690,9 +690,11 @@
                                 <outlet property="view" destination="mZk-S5-5Or" id="f8h-ml-MxD"/>
                             </connections>
                         </menuItem>
+                        <menuItem isSeparatorItem="YES" id="Sdw-4T-SxP"/>
                         <menuItem title="Main" id="d2R-N9-8Hu" userLabel="Main">
                             <modifierMask key="keyEquivalentModifierMask"/>
                         </menuItem>
+                        <menuItem isSeparatorItem="YES" id="9Em-5V-g0O"/>
                         <menuItem title="Quit" id="pS6-QW-opf">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>

@@ -40,13 +40,13 @@ class ShowView: NSViewController {
             return
         }
         
-        titleLabel?.stringValue     = show!.title
-        unseenLabel?.stringValue    = String(show!.remaining)
-        
-        if let picture = UserStorage.getPicture(show!.title) {
+        titleLabel?.stringValue     = show!.title ?? ""
+        unseenLabel?.stringValue    = String(show!.remaining ?? 0)
+
+        if let title = show!.title, let picture = UserStorage.getPicture(title) {
             imageView?.image = picture
-        } else {
-            request.getShowWithSize(show!.id, height: ShowView.HEIGHT, width: ShowView.WIDTH, onSuccess: onSuccess)
+        } else if let id = show!.id {
+            request.getShowWithSize(id, height: ShowView.HEIGHT, width: ShowView.WIDTH, onSuccess: onSuccess)
         }
 
     }
@@ -55,7 +55,9 @@ class ShowView: NSViewController {
         let banner  = NSImage(data: data)!
         imageView?.image = banner
         
-        UserStorage.savePicture(show!.title, image: banner)
+        if let title = show!.title {
+            UserStorage.savePicture(title, image: banner)
+        }
     }
     
 }

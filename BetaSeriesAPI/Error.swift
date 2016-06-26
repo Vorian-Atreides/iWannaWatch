@@ -24,8 +24,8 @@ struct Error: IModel {
         case TokenInvalid = 2001
     }
     
-    let code        : Int
-    let reason      : String
+    let code        : Int?
+    let reason      : String?
     
     init(code: Int, reason: String) {
         self.code   = code
@@ -33,7 +33,7 @@ struct Error: IModel {
     }
     
     init(json: JSON) {
-        code        = json["code"].int!
-        reason      = json["text"].string!
+        code        = json["code"].int
+        reason      = json["text"].string
     }
 }

@@ -25,27 +25,27 @@ class User: NSObject, NSCoding, IModel {
         return true
     }
     
-    let id          : Int
-    let login       : String
-    var password    : String
+    let id          : Int?
+    let login       : String?
+    var password    : String?
     
     required init(json: JSON) {
-        id          = json["id"].int!
-        login       = json["login"].string!
+        id          = json["id"].int
+        login       = json["login"].string
         password    = ""
     }
     
     @objc
     required init?(coder aDecoder: NSCoder) {
         id          = aDecoder.decodeIntegerForKey(User.ID_KEY)
-        login       = aDecoder.decodeObjectForKey(User.LOGIN_KEY) as! String
-        password    = aDecoder.decodeObjectForKey(User.PASSWORD_KEY) as! String
+        login       = aDecoder.decodeObjectForKey(User.LOGIN_KEY) as? String
+        password    = aDecoder.decodeObjectForKey(User.PASSWORD_KEY) as? String
     }
     
     @objc
     func encodeWithCoder(coder: NSCoder) {
-        coder.encodeInteger(id, forKey: User.ID_KEY)
-        coder.encodeObject(login, forKey: User.LOGIN_KEY)
-        coder.encodeObject(password, forKey: User.PASSWORD_KEY)
+        coder.encodeInteger(id!, forKey: User.ID_KEY)
+        coder.encodeObject(login!, forKey: User.LOGIN_KEY)
+        coder.encodeObject(password!, forKey: User.PASSWORD_KEY)
     }
 }

@@ -61,7 +61,7 @@ class LoginView: NSViewController {
                 reachabilityDelegate?.isUnreachable()
                 startCheckReachability()
             }
-            errorLabel.stringValue = error.reason
+            errorLabel.stringValue = error.reason ?? ""
             Animations.startOpacityAnimation(errorLabel)
             loginButton.layer?.removeAnimationForKey(Animations.ROTATE_KEY)
         }

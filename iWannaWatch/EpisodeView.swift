@@ -34,8 +34,8 @@ class EpisodeView: NSViewController {
             return
         }
         
-        codeTextField?.stringValue      = episode!.code
-        titleLabel?.stringValue         = episode!.title
+        codeTextField?.stringValue      = episode!.code ?? ""
+        titleLabel?.stringValue         = episode!.title ?? ""
         setButtonImage()
     }
     
@@ -52,10 +52,12 @@ class EpisodeView: NSViewController {
         Animations.startSpinningAnimation(seenButton)
         
         let request = EpisodeWatchedRequest()
-        if !hasSeen {
-            request.post(episode!.id, onSuccess: onSuccess, onErrors: onFailed)
-        } else {
-            request.delete(episode!.id, onSuccess: onSuccess, onErrors: onFailed)
+        if let id = episode!.id {
+            if !hasSeen {
+                request.post(id, onSuccess: onSuccess, onErrors: onFailed)
+            } else {
+                request.delete(id, onSuccess: onSuccess, onErrors: onFailed)
+            }
         }
     }
     

@@ -30,22 +30,22 @@ struct Episode: IModel {
     
     struct User {
         
-        var seen    : Bool
+        var seen    : Bool?
         
         init(json: JSON) {
-            seen    = json["seen"].bool!
+            seen    = json["seen"].bool
         }
 
     }
     
     struct Show {
         
-        let id      : Int
-        let title   : String
+        let id      : Int?
+        let title   : String?
         
         init(json: JSON) {
-            id      = json["id"].int!
-            title   = json["title"].string!
+            id      = json["id"].int
+            title   = json["title"].string
         }
 
     }
@@ -62,30 +62,30 @@ struct Episode: IModel {
 
     }
     
-    let id          : Int
-    let title       : String
-    let season      : Int
-    let episode     : Int
-    let show        : Show
-    let code        : String
-    let description : String
+    let id          : Int?
+    let title       : String?
+    let season      : Int?
+    let episode     : Int?
+    let show        : Show?
+    let code        : String?
+    let description : String?
     let date        : NSDate?
-    let note        : Note
-    let user        : User
-    let comments    : String
+    let note        : Note?
+    let user        : User?
+    let comments    : String?
     
     init(json: JSON) {
-        id          = json["id"].int!
-        title       = json["title"].string!
-        season      = json["season"].int!
-        episode     = json["episode"].int!
+        id          = json["id"].int
+        title       = json["title"].string
+        season      = json["season"].int
+        episode     = json["episode"].int
         show        = Show(json: json["show"])
-        code        = json["code"].string!
-        description = json["description"].string!
+        code        = json["code"].string
+        description = json["description"].string
         date        = json["date"] != nil ? Episode.formatter.dateFromString(json["date"].string!) : nil
         note        = Note(json: json["note"])
         user        = User(json: json["user"])
-        comments    = json["comments"].string!
+        comments    = json["comments"].string
     }
     
 }

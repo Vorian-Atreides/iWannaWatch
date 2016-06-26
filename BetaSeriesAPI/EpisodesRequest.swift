@@ -52,7 +52,8 @@ class EpisodeWatchedRequest: ARequest {
     
     private func parameters(id: String) -> [String: String] {
         let parameters = [
-            "id"             : id,
+            "id"    : id,
+            "bulk"  : "false"
             ]
         
         return parameters
