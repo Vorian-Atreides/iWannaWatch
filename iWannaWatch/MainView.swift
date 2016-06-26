@@ -10,44 +10,44 @@ import Cocoa
 
 class MainView: NSViewController {
 
-    @IBOutlet weak var tableView        : NSTableView!
+    @IBOutlet weak var  tableView       : NSTableView!
     
-    private let _episodeRequests    = EpisodesRequest()
-    private var _shows              = [Show]()
-    private var _show_cells         = [ShowCellView]()
+    private let         episodeRequests = EpisodesRequest()
+    private var         showViews       = [ShowView]()
     
-    var delegate                    : IReachabilityDelegate?
+    private var         lastCheck       : NSDate?
+    private var         timer           : NSTimer?
+    private let         reachability    = Reachability()
     
-    private var _timer              : NSTimer?
-    private let _reachability       = Reachability()
+    var delegate    : IReachabilityDelegate?
+    
+    private var shows = [Show]() {
+        didSet {
+            showViews.removeAll()
+            tableView.reloadData()
+            tableView.layout()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.setDataSource(self)
-        tableView.setDelegate(self)
+
         startCheckNews()
-    }
-    
-    private func clearGUI() {
-        _shows = []
-        _show_cells.removeAll()
-        tableView.reloadData()
-        tableView.layout()
     }
     
     @objc
     private func loadEpisodes() {
-        _episodeRequests.get(onEpisodesSuccess, onErrors: onEpisodeFailed)
+        print("Load episodes at: \(NSDate())")
+        shows = [Show]()
+        episodeRequests.get(onEpisodesSuccess, onErrors: onEpisodeFailed)
     }
     
     private func onEpisodesSuccess(shows: [Show]) {
         delegate?.isReachable()
-        clearGUI()
-        _shows      = shows.sort({ (first, second) -> Bool in
+        
+        self.shows = shows.sort({ (first, second) -> Bool in
             return first.title < second.title
         })
-        tableView.reloadData()
     }
     
     private func onEpisodeFailed(errors: [Error]) {
@@ -63,28 +63,31 @@ class MainView: NSViewController {
 extension MainView {
     
     private func startCheckNews() {
-        _timer?.invalidate()
-        _timer = NSTimer(timeInterval: 10 * 60, target: self, selector:
+        timer?.invalidate()
+        timer = NSTimer(timeInterval: 10 * 60, target: self, selector:
             #selector(MainView.loadEpisodes), userInfo: nil, repeats: true)
-        NSRunLoop.mainRunLoop().addTimer(_timer!, forMode: NSRunLoopCommonModes)
+        NSRunLoop.mainRunLoop().addTimer(timer!, forMode: NSRunLoopCommonModes)
         loadEpisodes()
     }
     
     private func startCheckReachability() {
-        _timer?.invalidate()
-        _timer = NSTimer(timeInterval: 10, target: self, selector:
+        timer?.invalidate()
+        timer = NSTimer(timeInterval: 10, target: self, selector:
             #selector(MainView.checkReachability), userInfo: nil, repeats: true)
-        NSRunLoop.mainRunLoop().addTimer(_timer!, forMode: NSRunLoopCommonModes)
+        NSRunLoop.mainRunLoop().addTimer(timer!, forMode: NSRunLoopCommonModes)
         checkReachability()
     }
     
     @objc
     private func checkReachability() {
-        _reachability.Ping({
-            self.delegate?.isReachable()
-            self.startCheckNews()
-        }) {
-            self.delegate?.isUnreachable()
+        reachability.Ping({ [weak self] in
+            
+            self?.delegate?.isReachable()
+            self?.startCheckNews()
+            
+        }) { [weak self] in
+            
+            self?.delegate?.isUnreachable()
         }
     }
     
@@ -93,7 +96,7 @@ extension MainView {
 extension MainView: NSTableViewDataSource {
     
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {
-        return _shows.count
+        return shows.count
     }
     
 }
@@ -107,19 +110,17 @@ extension MainView: NSTableViewDelegate {
     }
     
     func tableView(tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
-        let height = 64 + _shows[row].unseen.count * (32 + 2 * 2)
+        let height = 64 + shows[row].unseen.count * (32 + 2)
         return CGFloat(height)
     }
     
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
         
-        if row == _show_cells.count {
-            let cell = tableView.makeViewWithIdentifier(MainView.SHOW_CELL_IDENTIFIER, owner: nil) as! ShowCellView
-            cell.show = _shows[row]
-            _show_cells.append(cell)
-        }
-        
-        return _show_cells[row]
+        let show    = ShowView()
+        show.show   = shows[row]
+
+        showViews.append(show)
+        return show.view
     }
     
 }

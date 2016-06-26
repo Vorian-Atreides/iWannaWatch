@@ -15,15 +15,16 @@ class LoginView: NSViewController {
     @IBOutlet weak var errorLabel           : NSTextField!
     @IBOutlet weak var loginButton          : NSButton!
     
-    private let _authentication             = Authentication()
+    private let         authentication      = Authentication()
     
-    private var _timer                      : NSTimer?
-    private let _reachability               = Reachability()
+    private var         timer               : NSTimer?
+    private let         reachability        = Reachability()
     
     var navigatorDelegate                   : INavigatorDelegate?
     var reachabilityDelegate                : IReachabilityDelegate?
     
-    override func awakeFromNib() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
         startCheckReachability()
     }
     
@@ -42,7 +43,7 @@ class LoginView: NSViewController {
             return
         }
         Animations.startSpinningAnimation(loginButton)
-        _authentication.authenticate(login, password: password.md5(),
+        authentication.authenticate(login, password: password.md5(),
                                      onSuccess: authenticationSucceed,
                                      onErrors: authenticationFailed)
     }
@@ -71,20 +72,23 @@ class LoginView: NSViewController {
 extension LoginView {
     
     private func startCheckReachability() {
-        _timer?.invalidate()
-        _timer = NSTimer(timeInterval: 10, target: self, selector:
+        timer?.invalidate()
+        timer = NSTimer(timeInterval: 10, target: self, selector:
             #selector(LoginView.checkReachability), userInfo: nil, repeats: true)
-        NSRunLoop.mainRunLoop().addTimer(_timer!, forMode: NSRunLoopCommonModes)
+        NSRunLoop.mainRunLoop().addTimer(timer!, forMode: NSRunLoopCommonModes)
         checkReachability()
     }
     
     @objc
     private func checkReachability() {
-        _reachability.Ping({
-            self.reachabilityDelegate?.isReachable()
-            self._timer?.invalidate()
-            }) {
-            self.reachabilityDelegate?.isUnreachable()
+        reachability.Ping({ [weak self] in
+            
+            self?.reachabilityDelegate?.isReachable()
+            self?.timer?.invalidate()
+            
+            }) { [weak self] in
+                
+            self?.reachabilityDelegate?.isUnreachable()
         }
     }
     

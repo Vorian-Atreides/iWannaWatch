@@ -31,12 +31,14 @@
 		10612D371CF5F4DD0013F29E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10612D361CF5F4DD0013F29E /* WebKit.framework */; };
 		10612D3A1CF7173D0013F29E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10612D391CF7173D0013F29E /* StringExtensions.swift */; };
 		1063B4541D12DE6F00649DC8 /* IReachabilityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1063B4531D12DE6F00649DC8 /* IReachabilityDelegate.swift */; };
+		109710CE1D1ADBFF006754A6 /* ShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109710CC1D1ADBFF006754A6 /* ShowView.swift */; };
+		109710CF1D1ADBFF006754A6 /* ShowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 109710CD1D1ADBFF006754A6 /* ShowView.xib */; };
+		109710D11D1AF11A006754A6 /* NoScrollable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109710D01D1AF11A006754A6 /* NoScrollable.swift */; };
 		10AD8C4B1D0DA18400888F87 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AD8C4A1D0DA18400888F87 /* Animations.swift */; };
 		10F957561D04448300D3A73B /* EpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F957541D04448300D3A73B /* EpisodeView.swift */; };
 		10F957571D04448300D3A73B /* EpisodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10F957551D04448300D3A73B /* EpisodeView.xib */; };
 		10FF6D3E1CFF4FFF004F4FBB /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF6D3D1CFF4FFF004F4FBB /* Reachability.swift */; };
 		10FF6D491D027D8A004F4FBB /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF6D481D027D8A004F4FBB /* UserStorage.swift */; };
-		10FF6D4B1D030876004F4FBB /* ShowCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF6D4A1D030876004F4FBB /* ShowCellView.swift */; };
 		10FF6D4D1D03153A004F4FBB /* PictureRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF6D4C1D03153A004F4FBB /* PictureRequests.swift */; };
 		B7973A12E77581EDC6CADE77 /* Pods_iWannaWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C78AF9BC9AD5568159895 /* Pods_iWannaWatch.framework */; };
 /* End PBXBuildFile section */
@@ -89,12 +91,14 @@
 		10612D361CF5F4DD0013F29E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		10612D391CF7173D0013F29E /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		1063B4531D12DE6F00649DC8 /* IReachabilityDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IReachabilityDelegate.swift; sourceTree = "<group>"; };
+		109710CC1D1ADBFF006754A6 /* ShowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowView.swift; sourceTree = "<group>"; };
+		109710CD1D1ADBFF006754A6 /* ShowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowView.xib; sourceTree = "<group>"; };
+		109710D01D1AF11A006754A6 /* NoScrollable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoScrollable.swift; sourceTree = "<group>"; };
 		10AD8C4A1D0DA18400888F87 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		10F957541D04448300D3A73B /* EpisodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeView.swift; sourceTree = "<group>"; };
 		10F957551D04448300D3A73B /* EpisodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpisodeView.xib; sourceTree = "<group>"; };
 		10FF6D3D1CFF4FFF004F4FBB /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = BetaSeriesAPI/Reachability.swift; sourceTree = "<group>"; };
 		10FF6D481D027D8A004F4FBB /* UserStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
-		10FF6D4A1D030876004F4FBB /* ShowCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCellView.swift; sourceTree = "<group>"; };
 		10FF6D4C1D03153A004F4FBB /* PictureRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PictureRequests.swift; path = BetaSeriesAPI/PictureRequests.swift; sourceTree = "<group>"; };
 		7D37BA5206F4C912322662ED /* Pods-iWannaWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iWannaWatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iWannaWatch/Pods-iWannaWatch.debug.xcconfig"; sourceTree = "<group>"; };
 		8CC7674A8A233241F15EF8E2 /* Pods-iWannaWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iWannaWatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-iWannaWatch/Pods-iWannaWatch.release.xcconfig"; sourceTree = "<group>"; };
@@ -230,10 +234,11 @@
 			isa = PBXGroup;
 			children = (
 				104C49411CFF228E000E0F50 /* StatusServiceView.swift */,
-				10FF6D4A1D030876004F4FBB /* ShowCellView.swift */,
-				1049AAC21D083D72001697F4 /* MainView.xib */,
-				10F957551D04448300D3A73B /* EpisodeView.xib */,
+				109710D01D1AF11A006754A6 /* NoScrollable.swift */,
 				1049AAC41D083DEF001697F4 /* LoginView.xib */,
+				1049AAC21D083D72001697F4 /* MainView.xib */,
+				109710CD1D1ADBFF006754A6 /* ShowView.xib */,
+				10F957551D04448300D3A73B /* EpisodeView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -253,10 +258,11 @@
 		10FF6D431D01D7E7004F4FBB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				10F957541D04448300D3A73B /* EpisodeView.swift */,
 				104C493E1CFF1DBF000E0F50 /* StatusMenuController.swift */,
-				1049AAC81D0840CD001697F4 /* MainView.swift */,
 				1049AAC61D083F96001697F4 /* LoginView.swift */,
+				1049AAC81D0840CD001697F4 /* MainView.swift */,
+				109710CC1D1ADBFF006754A6 /* ShowView.swift */,
+				10F957541D04448300D3A73B /* EpisodeView.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -390,6 +396,7 @@
 				102D98A01CF20455002CE6E2 /* Podfile in Resources */,
 				1049AAC51D083DEF001697F4 /* LoginView.xib in Resources */,
 				1049AABF1D070158001697F4 /* Assets.xcassets in Resources */,
+				109710CF1D1ADBFF006754A6 /* ShowView.xib in Resources */,
 				102D987A1CF1CECB002CE6E2 /* Main.storyboard in Resources */,
 				1049AAC31D083D72001697F4 /* MainView.xib in Resources */,
 			);
@@ -467,8 +474,8 @@
 				1040ADAF1CFE5ADD00F5F9DA /* Show.swift in Sources */,
 				1040ADA41CF9E39300F5F9DA /* IModel.swift in Sources */,
 				10FF6D491D027D8A004F4FBB /* UserStorage.swift in Sources */,
-				10FF6D4B1D030876004F4FBB /* ShowCellView.swift in Sources */,
 				1049AACB1D0844A8001697F4 /* INavigatorDelegate.swift in Sources */,
+				109710D11D1AF11A006754A6 /* NoScrollable.swift in Sources */,
 				1040ADA01CF759B100F5F9DA /* Error.swift in Sources */,
 				1040ADAD1CFE5A3000F5F9DA /* EpisodesRequest.swift in Sources */,
 				1049AAC91D0840CD001697F4 /* MainView.swift in Sources */,
@@ -483,6 +490,7 @@
 				104C49421CFF228E000E0F50 /* StatusServiceView.swift in Sources */,
 				102D98B01CF4B70F002CE6E2 /* ARequest.swift in Sources */,
 				10FF6D3E1CFF4FFF004F4FBB /* Reachability.swift in Sources */,
+				109710CE1D1ADBFF006754A6 /* ShowView.swift in Sources */,
 				10612D3A1CF7173D0013F29E /* StringExtensions.swift in Sources */,
 				10612D351CF5DBA50013F29E /* Authentication.swift in Sources */,
 				10AD8C4B1D0DA18400888F87 /* Animations.swift in Sources */,

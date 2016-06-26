@@ -62,11 +62,11 @@ class StatusMenuController: NSObjectController, INavigatorDelegate {
 extension StatusMenuController: IReachabilityDelegate {
     
     func isUnreachable() {
-        serviceMenu.isUnreachable()
+        serviceMenu.State = StatusServiceView.Reachability.UnReachable
     }
     
     func isReachable() {
-        serviceMenu.isReachable()
+        serviceMenu.State = StatusServiceView.Reachability.Reachable
     }
     
 }

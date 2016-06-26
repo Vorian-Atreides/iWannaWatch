@@ -12,21 +12,31 @@ import Alamofire
 
 class StatusServiceView: NSView {
 
-    @IBOutlet weak var StatusImage  : NSImageView!
+    @IBOutlet weak var statusImage  : NSImageView!
     
     private static let green        = NSImage(named: "greenStatus")
     private static let red          = NSImage(named: "redStatus")
 
+    enum Reachability {
+        case Reachable;
+        case UnReachable;
+    }
+    
+    private var state   = Reachability.UnReachable
+    var State           : Reachability {
+        get {
+            return state
+        }
+        set {
+            state = newValue
+            switch state {
+            case Reachability.Reachable     : statusImage?.image = StatusServiceView.green
+            case Reachability.UnReachable   : statusImage?.image = StatusServiceView.red
+            }
+        }
+    }
+    
     override func awakeFromNib() {
-        isUnreachable()
-    }
-    
-    func isReachable() {
-        self.StatusImage.image  = StatusServiceView.green
-    }
-    
-    func isUnreachable() {
-        self.StatusImage.image  = StatusServiceView.red
     }
     
 }

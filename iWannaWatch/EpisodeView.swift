@@ -10,28 +10,32 @@ import Cocoa
 
 class EpisodeView: NSViewController {
     
-    private static let unseen   = NSImage(named: "unseen")
-    private static let seen     = NSImage(named: "seen")
+    private static let  unseen          = NSImage(named: "unseen")
+    private static let  seen            = NSImage(named: "seen")
     
-    @IBOutlet weak var titleLabel       : NSTextField!
-    @IBOutlet weak var codeTextField    : NSTextField!
-    @IBOutlet weak var seenButton       : NSButton!
+    @IBOutlet weak var  titleLabel      : NSTextField!
+    @IBOutlet weak var  codeTextField   : NSTextField!
+    @IBOutlet weak var  seenButton      : NSButton!
     
-    private var hasSeen             = false
+    private var         hasSeen         = false
     
     var episode: Episode? {
         didSet {
-            updateGUI()
+            loadGUI()
         }
     }
     
-    override func awakeFromNib() {
-        updateGUI()
+    override func viewDidLoad() {
+        loadGUI()
     }
     
-    private func updateGUI() {
-        codeTextField?.stringValue      = episode == nil ? "" : episode!.code
-        titleLabel?.stringValue         = episode?.title ?? ""
+    private func loadGUI() {
+        if episode == nil {
+            return
+        }
+        
+        codeTextField?.stringValue      = episode!.code
+        titleLabel?.stringValue         = episode!.title
         setButtonImage()
     }
     
