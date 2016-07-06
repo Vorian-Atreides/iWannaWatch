@@ -735,7 +735,7 @@
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
                             <connections>
-                                <action selector="quitClicked:" target="11H-Ns-wlk" id="2V4-OB-yfP"/>
+                                <action selector="terminate:" target="hnw-xV-0zn" id="wvW-gf-wIN"/>
                             </connections>
                         </button>
                     </subviews>

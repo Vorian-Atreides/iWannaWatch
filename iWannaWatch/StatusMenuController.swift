@@ -17,7 +17,7 @@ class StatusMenuController: NSObjectController, INavigatorDelegate {
     @IBOutlet weak var loginTextField   : NSTextField!
     @IBOutlet weak var logoutButton     : NSButton!
     
-    private let _statusItem             = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
+    private var _statusItem             = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
     
     private var _mainController         : NSViewController?
     
@@ -27,6 +27,7 @@ class StatusMenuController: NSObjectController, INavigatorDelegate {
         _statusItem.image   = icon
         _statusItem.menu    = StatusMenu
         
+        handleActivationIssue()
         refreshUI()
     }
     
@@ -54,9 +55,44 @@ class StatusMenuController: NSObjectController, INavigatorDelegate {
         refreshUI()
     }
     
-    @IBAction func quitClicked(sender: NSButton) {
-        NSApplication.sharedApplication().terminate(self)
+    private var activated = false
+}
+
+extension StatusMenuController {
+    
+    // Succeed to find a hack to replace the lack of makeKeyWindow which doesn't work
+    // with a NSStatutBarWindow
+    private func handleActivationIssue() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(onActivate), name: "ACTIVATE", object: nil)
+        let click = NSClickGestureRecognizer(target: self, action: #selector(onClick))
+        _statusItem.button?.addGestureRecognizer(click);
     }
+    
+    @objc
+    private func onClick() {
+        
+        if ((_mainController as? LoginView) != nil && !NSRunningApplication.currentApplication().active) {
+            dispatch_async(dispatch_get_main_queue()) { [weak self] in
+                self?.activated = true
+                NSRunningApplication.currentApplication().activateWithOptions(NSApplicationActivationOptions.ActivateIgnoringOtherApps)
+            }
+        } else {
+            _statusItem.popUpStatusItemMenu(StatusMenu)
+        }
+    }
+    
+    @objc
+    private func onActivate() {
+        if (activated) {
+            activated = false
+            dispatch_async(dispatch_get_main_queue()) { [weak self] in
+                if let s = self {
+                    s._statusItem.popUpStatusItemMenu(s.StatusMenu)
+                }
+            }
+        }
+    }
+    
 }
 
 extension StatusMenuController: IReachabilityDelegate {

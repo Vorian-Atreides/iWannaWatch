@@ -10,10 +10,10 @@ import Cocoa
 
 class LoginView: NSViewController {
 
-    @IBOutlet weak var loginTextField       : NSTextField!
-    @IBOutlet weak var passwordTextField    : NSSecureTextField!
-    @IBOutlet weak var errorLabel           : NSTextField!
-    @IBOutlet weak var loginButton          : NSButton!
+    @IBOutlet weak var  loginTextField      : NSTextField!
+    @IBOutlet weak var  passwordTextField   : NSSecureTextField!
+    @IBOutlet weak var  errorLabel          : NSTextField!
+    @IBOutlet weak var  loginButton         : NSButton!
     
     private let         authentication      = Authentication()
     
@@ -25,7 +25,16 @@ class LoginView: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        loginTextField.delegate = self
         startCheckReachability()
+    }
+    
+    override func viewWillDisappear() {
+        super.viewWillDisappear()
+        
+        timer?.invalidate()
+        timer = nil
     }
     
     @IBAction func loginPressed(sender: NSButton) {

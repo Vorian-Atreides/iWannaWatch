@@ -30,13 +30,19 @@ class MainView: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         startCheckNews()
+    }
+    
+    override func viewWillDisappear() {
+        super.viewWillDisappear()
+        
+        timer?.invalidate()
+        timer = nil
     }
     
     @objc
     private func loadEpisodes() {
-        print("Load episodes at: \(NSDate())")
         shows = [Show]()
         episodeRequests.get(onEpisodesSuccess, onErrors: onEpisodeFailed)
     }
@@ -114,7 +120,6 @@ extension MainView: NSTableViewDelegate {
     }
     
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        
         let show    = ShowView()
         show.show   = shows[row]
 
