@@ -10,10 +10,6 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    
-    func applicationWillBecomeActive(notification: NSNotification) {
-        NSNotificationCenter.defaultCenter().postNotificationName("ACTIVATE", object: nil)
-    }
-    
+        
 }
 

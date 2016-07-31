@@ -21,16 +21,16 @@
 		1040ADAF1CFE5ADD00F5F9DA /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1040ADAE1CFE5ADD00F5F9DA /* Show.swift */; };
 		1049AABF1D070158001697F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1049AABE1D070158001697F4 /* Assets.xcassets */; };
 		1049AAC31D083D72001697F4 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1049AAC21D083D72001697F4 /* MainView.xib */; };
-		1049AAC51D083DEF001697F4 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1049AAC41D083DEF001697F4 /* LoginView.xib */; };
 		1049AAC71D083F96001697F4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1049AAC61D083F96001697F4 /* LoginView.swift */; };
 		1049AAC91D0840CD001697F4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1049AAC81D0840CD001697F4 /* MainView.swift */; };
-		1049AACB1D0844A8001697F4 /* INavigatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1049AACA1D0844A8001697F4 /* INavigatorDelegate.swift */; };
 		104C493F1CFF1DBF000E0F50 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104C493E1CFF1DBF000E0F50 /* StatusMenuController.swift */; };
 		104C49421CFF228E000E0F50 /* StatusServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104C49411CFF228E000E0F50 /* StatusServiceView.swift */; };
 		10612D351CF5DBA50013F29E /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10612D341CF5DBA50013F29E /* Authentication.swift */; };
 		10612D371CF5F4DD0013F29E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10612D361CF5F4DD0013F29E /* WebKit.framework */; };
 		10612D3A1CF7173D0013F29E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10612D391CF7173D0013F29E /* StringExtensions.swift */; };
 		1063B4541D12DE6F00649DC8 /* IReachabilityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1063B4531D12DE6F00649DC8 /* IReachabilityDelegate.swift */; };
+		107BB38C1D4DEA890030A1C9 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107BB38B1D4DEA890030A1C9 /* LoginButton.swift */; };
+		107BB3A71D4E07040030A1C9 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107BB3A61D4E07040030A1C9 /* ServiceManagement.framework */; };
 		109710CE1D1ADBFF006754A6 /* ShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109710CC1D1ADBFF006754A6 /* ShowView.swift */; };
 		109710CF1D1ADBFF006754A6 /* ShowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 109710CD1D1ADBFF006754A6 /* ShowView.xib */; };
 		109710D11D1AF11A006754A6 /* NoScrollable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109710D01D1AF11A006754A6 /* NoScrollable.swift */; };
@@ -82,16 +82,16 @@
 		1040ADAE1CFE5ADD00F5F9DA /* Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Show.swift; path = BetaSeriesAPI/Show.swift; sourceTree = "<group>"; };
 		1049AABE1D070158001697F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1049AAC21D083D72001697F4 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
-		1049AAC41D083DEF001697F4 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		1049AAC61D083F96001697F4 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1049AAC81D0840CD001697F4 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		1049AACA1D0844A8001697F4 /* INavigatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INavigatorDelegate.swift; sourceTree = "<group>"; };
 		104C493E1CFF1DBF000E0F50 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
 		104C49411CFF228E000E0F50 /* StatusServiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusServiceView.swift; sourceTree = "<group>"; };
 		10612D341CF5DBA50013F29E /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Authentication.swift; path = BetaSeriesAPI/Authentication.swift; sourceTree = "<group>"; };
 		10612D361CF5F4DD0013F29E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		10612D391CF7173D0013F29E /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		1063B4531D12DE6F00649DC8 /* IReachabilityDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IReachabilityDelegate.swift; sourceTree = "<group>"; };
+		107BB38B1D4DEA890030A1C9 /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		107BB3A61D4E07040030A1C9 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		109710CC1D1ADBFF006754A6 /* ShowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowView.swift; sourceTree = "<group>"; };
 		109710CD1D1ADBFF006754A6 /* ShowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowView.xib; sourceTree = "<group>"; };
 		109710D01D1AF11A006754A6 /* NoScrollable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoScrollable.swift; sourceTree = "<group>"; };
@@ -111,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				107BB3A71D4E07040030A1C9 /* ServiceManagement.framework in Frameworks */,
 				10612D371CF5F4DD0013F29E /* WebKit.framework in Frameworks */,
 				B7973A12E77581EDC6CADE77 /* Pods_iWannaWatch.framework in Frameworks */,
 			);
@@ -237,10 +238,10 @@
 			children = (
 				104C49411CFF228E000E0F50 /* StatusServiceView.swift */,
 				109710D01D1AF11A006754A6 /* NoScrollable.swift */,
-				1049AAC41D083DEF001697F4 /* LoginView.xib */,
 				1049AAC21D083D72001697F4 /* MainView.xib */,
 				109710CD1D1ADBFF006754A6 /* ShowView.xib */,
 				10F957551D04448300D3A73B /* EpisodeView.xib */,
+				107BB38B1D4DEA890030A1C9 /* LoginButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -250,7 +251,6 @@
 			children = (
 				10612D391CF7173D0013F29E /* StringExtensions.swift */,
 				10FF6D481D027D8A004F4FBB /* UserStorage.swift */,
-				1049AACA1D0844A8001697F4 /* INavigatorDelegate.swift */,
 				10AD8C4A1D0DA18400888F87 /* Animations.swift */,
 				1063B4531D12DE6F00649DC8 /* IReachabilityDelegate.swift */,
 			);
@@ -281,6 +281,7 @@
 		E8A387EE859D09655F4383FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				107BB3A61D4E07040030A1C9 /* ServiceManagement.framework */,
 				10612D361CF5F4DD0013F29E /* WebKit.framework */,
 				F66C78AF9BC9AD5568159895 /* Pods_iWannaWatch.framework */,
 			);
@@ -402,7 +403,6 @@
 			files = (
 				10F957571D04448300D3A73B /* EpisodeView.xib in Resources */,
 				102D98A01CF20455002CE6E2 /* Podfile in Resources */,
-				1049AAC51D083DEF001697F4 /* LoginView.xib in Resources */,
 				1049AABF1D070158001697F4 /* Assets.xcassets in Resources */,
 				109710CF1D1ADBFF006754A6 /* ShowView.xib in Resources */,
 				102D987A1CF1CECB002CE6E2 /* Main.storyboard in Resources */,
@@ -482,8 +482,8 @@
 				1040ADAF1CFE5ADD00F5F9DA /* Show.swift in Sources */,
 				1040ADA41CF9E39300F5F9DA /* IModel.swift in Sources */,
 				10FF6D491D027D8A004F4FBB /* UserStorage.swift in Sources */,
-				1049AACB1D0844A8001697F4 /* INavigatorDelegate.swift in Sources */,
 				109710D11D1AF11A006754A6 /* NoScrollable.swift in Sources */,
+				107BB38C1D4DEA890030A1C9 /* LoginButton.swift in Sources */,
 				1040ADA01CF759B100F5F9DA /* Error.swift in Sources */,
 				1040ADAD1CFE5A3000F5F9DA /* EpisodesRequest.swift in Sources */,
 				1049AAC91D0840CD001697F4 /* MainView.swift in Sources */,
@@ -640,6 +640,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = iWannaWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.siffert.gaston.iWannaWatch;
@@ -659,6 +660,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = iWannaWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.siffert.gaston.iWannaWatch;

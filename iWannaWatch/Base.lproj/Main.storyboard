@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="h2b-JJ-NCC">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
@@ -743,8 +743,118 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
+        <!--Window Controller-->
+        <scene sceneID="WKm-yn-Zzn">
+            <objects>
+                <windowController showSeguePresentationStyle="single" id="h2b-JJ-NCC" sceneMemberID="viewController">
+                    <window key="window" title="iWannaWatch" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="TER-6c-tMq">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                    </window>
+                    <connections>
+                        <segue destination="OC9-dv-nUn" kind="relationship" relationship="window.shadowedContentViewController" id="sWP-mr-g7m"/>
+                    </connections>
+                </windowController>
+                <customObject id="XCY-Rs-Pxb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33" y="288"/>
+        </scene>
+        <!--Login View-->
+        <scene sceneID="KpN-pb-2wu">
+            <objects>
+                <viewController id="OC9-dv-nUn" customClass="LoginView" customModule="iWannaWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="D4u-A7-xh4">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uJe-SD-4dY" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="LoginBackground" id="PUU-ve-AWV"/>
+                            </imageView>
+                            <visualEffectView wantsLayer="YES" appearanceType="vibrantLight" fixedFrame="YES" blendingMode="behindWindow" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="vqv-Rr-59b">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <subviews>
+                                    <customView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qwL-1s-wGg" userLabel="Login">
+                                        <rect key="frame" x="110" y="60" width="260" height="140"/>
+                                        <subviews>
+                                            <textField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y43-92-RFD" userLabel="loginField">
+                                                <rect key="frame" x="20" y="98" width="225" height="22"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" placeholderString="Email" drawsBackground="YES" id="gRq-Oy-gci">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                                <connections>
+                                                    <action selector="performClick:" target="jmQ-83-OdQ" id="7ei-Id-yeX"/>
+                                                    <outlet property="nextKeyView" destination="1hp-QQ-p7K" id="SV1-JQ-6xU"/>
+                                                </connections>
+                                            </textField>
+                                            <secureTextField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1hp-QQ-p7K">
+                                                <rect key="frame" x="20" y="66" width="225" height="22"/>
+                                                <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" usesSingleLineMode="YES" id="Rlb-NN-PNC">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <allowedInputSourceLocales>
+                                                        <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                                    </allowedInputSourceLocales>
+                                                </secureTextFieldCell>
+                                                <connections>
+                                                    <action selector="performClick:" target="jmQ-83-OdQ" id="yqM-wo-rEM"/>
+                                                </connections>
+                                            </secureTextField>
+                                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" alphaValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="J68-v9-KXG" userLabel="errorLabel">
+                                                <rect key="frame" x="20" y="41" width="225" height="17"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="jVv-vN-fjB">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <button wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jmQ-83-OdQ" userLabel="loginButton">
+                                                <rect key="frame" x="114" y="7" width="32" height="32"/>
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="loginButton" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="u8G-HJ-cG6">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="loginPressed:" target="OC9-dv-nUn" id="Wz2-xK-KSr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="nextKeyView" destination="y43-92-RFD" id="SgZ-Dt-EHL"/>
+                                        </connections>
+                                    </customView>
+                                </subviews>
+                                <backgroundFilters>
+                                    <ciFilter name="CIGaussianBlur">
+                                        <configuration>
+                                            <null key="inputImage"/>
+                                            <real key="inputRadius" value="10"/>
+                                        </configuration>
+                                    </ciFilter>
+                                </backgroundFilters>
+                            </visualEffectView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="errorLabel" destination="J68-v9-KXG" id="Jv8-pa-C8j"/>
+                        <outlet property="loginButton" destination="jmQ-83-OdQ" id="wiA-o5-oAa"/>
+                        <outlet property="loginTextField" destination="y43-92-RFD" id="pA5-fL-DCx"/>
+                        <outlet property="loginView" destination="qwL-1s-wGg" id="1Wq-ND-iZc"/>
+                        <outlet property="passwordTextField" destination="1hp-QQ-p7K" id="XaN-Cv-kPW"/>
+                    </connections>
+                </viewController>
+                <customObject id="QAs-je-xF2" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="675" y="288"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="LoginBackground" width="1382.4000244140625" height="777.5999755859375"/>
+        <image name="loginButton" width="12.800000190734863" height="12.800000190734863"/>
         <image name="logoutButton" width="16" height="16"/>
         <image name="redStatus" width="51.200000762939453" height="51.200000762939453"/>
     </resources>
